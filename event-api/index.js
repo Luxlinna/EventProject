@@ -12,7 +12,14 @@ const PORT = process.env.PORT || 5001;
 const mongoURI = process.env.MONGODB_URI;
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://event-project-mu.vercel.app"],
+        methods:  ["GET", "POST", "PUT", "DELETE"],
+        credentials: true
+    }
+));
 app.use(express.json());
 
 // Static file serving for uploaded images
