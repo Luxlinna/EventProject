@@ -15,7 +15,7 @@ const mongoURI = process.env.MONGODB_URI;
 // app.use(cors());
 app.use(cors(
     {
-        origin: ["https://event-project-mu.vercel.app"],
+        origin: [""],
         methods:  ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
